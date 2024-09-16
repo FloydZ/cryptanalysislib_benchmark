@@ -1,0 +1,12 @@
+[submodule "deps/cryptanalysislib"]
+	path = deps/cryptanalysislib
+	url = https://github.com/FloydZ/cryptanalysislib
+[submodule "deps/folly"]
+	path = deps/folly
+	url = https://github.com/facebook/folly
+[submodule "deps/abseil-cpp"]
+	path = deps/abseil-cpp
+	url = https://github.com/abseil/abseil-cpp.git
+[submodule "deps/cmake_optimize_for_architecture"]
+	path = deps/cmake_optimize_for_architecture
+	url = https://github.com/FloydZ/cmake_optimize_for_architecture
