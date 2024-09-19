@@ -33,6 +33,7 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
       ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
 endif()
 
+set(ABSL_PROPAGATE_CXX_STD ON)
 # import needed  
 include(FetchContent)
 include(ExternalProject)
@@ -87,7 +88,8 @@ add_subdirectory(deps/abseil-cpp)
 add_subdirectory(deps/cryptanalysislib)
 add_subdirectory(deps/folly)
 
-include_directories("deps/cryptanaly/src")
+include_directories("deps/cryptanalysislib/src")
+include_directories("deps/abseil-cpp")
 
 # global include directories
 include_directories("deps/b63/include/b63")
@@ -188,7 +190,9 @@ set(LINK_TEST_FLAGS
 
 set(LINK_BENCH_FLAGS 
 	benchmark::benchmark 
-	absl::strings
+	absl::base
+ 	absl::flat_hash_map
+	Threads::Threads
 )
 
 
