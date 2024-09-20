@@ -192,6 +192,7 @@ set(LINK_BENCH_FLAGS
 	benchmark::benchmark 
 	absl::base
  	absl::flat_hash_map
+	absl::node_hash_map
 	Threads::Threads
 )
 
